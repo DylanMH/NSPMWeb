@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Northstar Property Maintenance</title>
+    <link rel="icon" type="image/x-icon" href="./images/nspmlogo.png" />
+    <!--JQUERY-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!--FONT AWESOME ICONS-->
+    <script
+      src="https://kit.fontawesome.com/e48928bccb.js"
+      crossorigin="anonymous"
+    ></script>
+    <!--BOOTSTRAP 5-->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <!--CUSTOM FILES-->
+    <link rel="stylesheet" type="text/css" href="./css/style.css?v=1" />
+    <script src="./js/custom.js" type="text/javascript"></script>
+    <!--GOOGLE CAPTCHA-->
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+  </head>
+  <body>
+    <!--HEADER-->
+    <div class="header-height-bar" style="min-height: 115px"></div>
+    <header class="fixed-top">
+      <div class="header-main header-light header-height" style="top: -38px">
+        <div class="header-top d-none d-lg-block bg-dark">
+          <div class="container">
+            <div class="row align-items-center">
+              <div class="col-lg-6">
+                <div class="nav">
+                  <a
+                    href="https://www.facebook.com/NSPMLLC"
+                    target="_blank"
+                    class="me-3 p-1 white-link"
+                    ><i class="fab fa-facebook-f"></i
+                  ></a>
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <div class="nav justify-content-end small">
+                  <a class="py-2 white-link" href="tel:12142413111"
+                    ><i class="fas fa-comments text-white me-2"></i>+1 (214)
+                    241-3111</a
+                  >
+                  <a
+                    class="py-2 ms-4 white-link"
+                    href="mailto:business@northstar-pm.com"
+                    target="_blank"
+                    ><i class="fas fa-envelope-open text-white me-2"></i
+                    >business@northstar-pm.com</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- NAVIGATION HEADER -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+          <div class="container">
+            <a class="navbar-brand" href="index.html">
+              <img
+                src="images/nspmlogo.png"
+                title="nspm"
+                alt="nspm logo"
+                style="height: 5em"
+              />
+            </a>
+            <!-- MOBILE TOGGLE -->
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <!-- END MOBILE TOGGLE -->
+            <div class="navbar-collapse collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                  <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="index.html#about">About</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="index.html#services">Services</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="contact-us.html">Contact</a>
+                </li>
+              </ul>
+              <div class="extra-menu d-none d-lg-block ps-4">
+                <a class="btn btn-primary btn-md" href="tel:12142413111">
+                  <span class="fas fa-phone fa-rotate-90"></span>
+                  <span class="btn--text">Call now</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </nav>
+        <!-- END NAVIGATION HEADER -->
+      </div>
+    </header>
+    <!--HEADER END-->
+
+    <!--MAIN-->
+    <main>
+      <!--PAGE TITLE-->
+      <section
+        class="section position-relative opacity-80"
+        style="
+          width: 100%;
+          background-image: url(./images/projects/school-striping6.jpg);
+          background-repeat: no-repeat;
+          background-position: center;
+          background-size: cover;
+        "
+      >
+        <div class="container position relative">
+          <div class="row align-items-center justify-content-center">
+            <div class="col-lg-8 text-center">
+              <h6 class="text-white fw-bold">We'd love to hear from you</h6>
+              <h1 class="display-4 fw-bold text-white m-0">Contact Us</h1>
+              <ol class="breadcrumb light mb-0 mt-3 justify-content-center">
+                <li class="breadcrumb-item fs-5">
+                  <a href="index.html">Home</a>
+                </li>
+                <li
+                  class="breadcrumb-item fw-bold fs-4 active"
+                  aria-current="page"
+                >
+                  Contact Us
+                </li>
+              </ol>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--END PAGE TITLE-->
+
+      <!--CONTACT FORM-->
+      <section class="section">
+        <div class="container py-4">
+          <div class="row justify-content-center">
+            <!-- Contact Form -->
+            <div class="col-md-8">
+              <h1 class="text-center">
+                Send us an email, and we'll get back to you as soon as possible!
+              </h1>
+              <form
+                id="contact-form"
+                name="contact-form"
+                action="./php/email_handler.php"
+                method="POST"
+              >
+                <!--HONEYPOT FIELDS-->
+                <div style="display: none">
+                  <label for="zipcode">Zipcode</label>
+                  <input type="text" name="zipcode" id="zipcode" />
+                </div>
+                <div style="display: none">
+                  <label for="phone">Phone</label>
+                  <input type="text" name="phone" id="phone" />
+                </div>
+                <!--NAME INPUT-->
+                <div class="mb-3">
+                  <label class="form-label" for="name"></label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="name"
+                    name="name"
+                    required
+                    placeholder="Name"
+                  />
+                </div>
+                <!--EMAIL INPUT-->
+                <div class="mb-3">
+                  <label class="form-label" for="emailAddress"></label>
+                  <input
+                    type="email"
+                    class="form-control"
+                    id="emailAddress"
+                    name="email"
+                    required
+                    placeholder="Email"
+                  />
+                </div>
+                <!--MESSAGE INPUT-->
+                <div class="mb-3">
+                  <label class="form-label" for="message"></label>
+                  <textarea
+                    class="form-control"
+                    id="message"
+                    name="message"
+                    type="text"
+                    placeholder="Message"
+                    style="height: 10rem"
+                    required
+                  ></textarea>
+                </div>
+                <!-- reCAPTCHA and Submit Button -->
+                <div id="notification" class="notification rounded"></div>
+                <div
+                  class="g-recaptcha d-flex justify-content-center align-items-center"
+                  data-sitekey="CAPTCHA SECRET KEY"
+                  data-callback="onSubmit"
+                ></div>
+                <div
+                  class="mb-3 d-flex justify-content-center align-items-center"
+                >
+                  <button
+                    class="btn btn-primary btn-lg mt-2"
+                    id="submitButton"
+                    type="submit"
+                    disabled
+                  >
+                    Submit
+                    <i class="fas fa-paper-plane px-3"></i>
+                  </button>
+                </div>
+              </form>
+              <!-- Notification for form submission result -->
+            </div>
+
+            <!-- Company Info Card -->
+            <div class="col-md-4">
+              <div class="card h-100">
+                <div class="card-body">
+                  <h5 class="card-title text-muted">Contact Us</h5>
+                  <p class="card-text fw-bold fs-5">
+                    Location: We serve the Dallas/Fort Worth area and are
+                    located in Royse City
+                    <br />
+                    <br />
+                    Phone:
+                    <a
+                      class="link-effect"
+                      style="color: var(--bs-orange)"
+                      href="tel:12142413111"
+                      >+1 (214) 241-3111</a
+                    >
+                    <br />
+                    Email:<a
+                      class="link-effect"
+                      style="color: var(--bs-orange)"
+                      href="mailto:business@northstar-pm.com"
+                    >
+                      business@northstar-pm.com</a
+                    >
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--END CONTACT FORM-->
+    </main>
+    <!--MAIN END-->
+    <!--FOOTER-->
+    <footer class="bg-dark footer">
+      <!--FOOTER TOP-->
+      <div class="footer-top">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-3 my-4">
+              <img
+                src="./images/nspmlogo.png"
+                title=""
+                alt="nspm logo"
+                style="height: 5em; width: 12em"
+              />
+              <p class="text-white-50 pt-4 w-8 m-0"></p>
+            </div>
+            <div class="col-md-6 col-lg-3 my-4">
+              <h5 class="text-white mb-3">Useful Links</h5>
+              <ul class="list-unstyled white-link footer-links">
+                <li>
+                  <a class="white-link" href="index.html">Home</a>
+                </li>
+                <li>
+                  <a class="white-link" href="index.html#about">About</a>
+                </li>
+                <li>
+                  <a class="white-link" href="index.html#services">Services</a>
+                </li>
+                <li>
+                  <a class="white-link" href="contact-us.html">Contact</a>
+                </li>
+              </ul>
+            </div>
+            <div class="col-md-6 col-lg-3 my-4">
+              <h5 class="text-white mb-3">Contact Us</h5>
+              <ul class="list-unstyled footer-links">
+                <li>
+                  <a href="contact-us.html" class="media white-link">
+                    <div class="icon icon-primary icon-sm rounded-circle">
+                      <i class="fa fa-map"></i>
+                    </div>
+                    <span class="media-body ps-3"> Dallas/Fort Worth </span>
+                  </a>
+                </li>
+                <li>
+                  <a href="tel:12142413111" class="media">
+                    <div class="icon icon-primary icon-sm rounded-circle">
+                      <i class="fa fa-phone"></i>
+                    </div>
+                    <span class="white-link media-body ps-3">
+                      +1 (214) 241-3111
+                    </span>
+                  </a>
+                </li>
+                <li>
+                  <a href="mailto:business@northstar-pm.com" class="media">
+                    <div class="icon icon-primary icon-sm rounded-circle">
+                      <i class="fa fa-envelope"></i>
+                    </div>
+                    <span class="white-link media-body ps-3">
+                      business@northstar-pm.com
+                    </span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--END FOOTER TOP-->
+      <!--FOOTER BOTTOM-->
+      <div class="border-style top light">
+        <div class="container">
+          <div class="row align-content-center">
+            <div class="col-md-6 my-3">
+              <div class="nav justify-content-center justify-content-md-start">
+                <a
+                  class="icon icon-sm icon-primary rounded-circle me-2"
+                  href="https://www.facebook.com/NSPMLLC"
+                  target="_blank"
+                  ><i class="fa fa-facebook"></i
+                ></a>
+              </div>
+            </div>
+            <div class="col-md-6 my-3 text-center text-md-end">
+              <p class="m-0 text-white-50">
+                © 2023 copyright
+                <a href="index.html" class="white-link"
+                  >NorthStar Property Maintenance</a
+                >
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--END FOOTER BOTTOM-->
+    </footer>
+    <!--END FOOTER-->
+
+    <!--BOOTSTRAP JS-->
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+      integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"
+      integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

@@ -1,0 +1,7 @@
+- add dark mode
+* add footer
+* update carousel intro ui(title, header, etc)
+* remove orange hover on nav items
+* use a darker white for section backgrounds
+- update contact image text ui(try green or orange)
+* figure out a way to center the nav links on click(like how the services is)
